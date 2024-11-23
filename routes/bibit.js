@@ -8,3 +8,9 @@ const bibit = [
     kondisi_tumbuh: "Kebutuhan sinar matahari",
   },
 ];
+
+router.get("/", (req, res) => {
+  res.send(bibit);
+});
+
+export default router;
