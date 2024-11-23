@@ -2,22 +2,18 @@ import express from "express";
 import bodyParser from "body-parser";
 import pupukRoutes from "./routes/pupuk.js";
 import bibitRoutes from "./routes/bibit.js";
-import pupuk_todosRoutes from "./routes/pupuk_todo.js";
 
 const app = express();
 const port = 3000;
 
-app.use("/pupuk", pupukRoutes);
-app.use("/bibit", bibitRoutes);
-app.use("/pupukkk", pupuk_todosRoutes);
+app.use(bodyParser.json()); // Untuk parsing JSON
+app.use("/pupuk", pupukRoutes); // Routing untuk pupuk
+app.use("/bibit", bibitRoutes); // Routing untuk bibit
 
 app.get("/", (req, res) => {
-  console.log(["GET ROUTE"]);
-  res.send("Selamat Imam Dwi Yan Permana");
+  res.send("Selamat datang di sistem manajemen pupuk dan bibit!");
 });
 
-app.use(bodyParser.json());
-
 app.listen(port, () =>
-  console.log(`server berjalan di port : http://localhost:${port}`)
+  console.log(`Server berjalan di port: http://localhost:${port}`)
 );
