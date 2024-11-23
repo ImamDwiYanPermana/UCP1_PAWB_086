@@ -17,5 +17,5 @@ app.get("/", (req, res) => {
 app.use(bodyParser.json());
 
 app.listen(port, () =>
-  console.log(s`erver berjalan di port : http://localhost:${port}`)
+  console.log(`server berjalan di port : http://localhost:${port}`)
 );
