@@ -8,3 +8,8 @@ const port = 3000;
 
 app.use("/pupuk", pupukRoutes);
 app.use("/bibit", bibitRoutes);
+
+app.get("/", (req, res) => {
+  console.log(["GET ROUTE"]);
+  res.send("Selamat Imam Dwi Yan Permana");
+});
