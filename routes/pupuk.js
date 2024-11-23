@@ -8,3 +8,9 @@ const pupuk = [
     tipe_pupuk: "organik",
   },
 ];
+
+router.get("/", (req, res) => {
+  res.send(pupuk);
+});
+
+export default router;
