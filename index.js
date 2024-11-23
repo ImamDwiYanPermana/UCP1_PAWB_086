@@ -13,3 +13,9 @@ app.get("/", (req, res) => {
   console.log(["GET ROUTE"]);
   res.send("Selamat Imam Dwi Yan Permana");
 });
+
+app.use(bodyParser.json());
+
+app.listen(port, () =>
+  console.log(s`erver berjalan di port : http://localhost:${port}`)
+);
